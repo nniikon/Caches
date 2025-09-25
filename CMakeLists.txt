@@ -5,13 +5,12 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-option(BUILD_MAIN "Build the main applications" ON)
+option(BUILD_MAIN "Build the test applications" ON)
 
 # Loguru
 set(LOGURU_WITH_STREAMS TRUE)
 add_subdirectory(external/loguru)
 
-# Standard testing toggle & plumbing
 include(CTest)
 
 # ---- Main ----
