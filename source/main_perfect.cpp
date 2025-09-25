@@ -29,7 +29,7 @@ int main() {
 
     size_t perfect_hit_count = 0;
     for (size_t i = 0; i < input_size; i++) {
-        std::pair<bool, Page&> perfect_lookup_res = perfect_cache.Lookup(GetPage);
+        std::pair<bool, Page> perfect_lookup_res = perfect_cache.Lookup(GetPage);
         perfect_hit_count += perfect_lookup_res.first;
     }
 

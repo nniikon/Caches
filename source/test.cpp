@@ -73,11 +73,11 @@ TEST(CacheIdealGeneral, WarmUpThenHits) {
     EXPECT_EQ((CheckHitrateIdeal(3, 12, std::vector{1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5})), 5);
     EXPECT_EQ((CheckHitrateIdeal(3, 6,  std::vector{1, 2, 3, 2, 1, 3})),                   3);
     EXPECT_EQ((CheckHitrateIdeal(2, 6,  std::vector{1, 2, 1, 2, 1, 2})),                   4);
-    EXPECT_EQ((CheckHitrateIdeal(3, 8,  std::vector{1, 2, 3, 1, 4, 1, 2, 3})),             3);
+    EXPECT_EQ((CheckHitrateIdeal(3, 8,  std::vector{1, 2, 3, 1, 4, 1, 2, 3})),             4);
     EXPECT_EQ((CheckHitrateIdeal(4, 7,  std::vector{1, 2, 3, 4, 3, 2, 1})),                3);
     EXPECT_EQ((CheckHitrateIdeal(2, 6,  std::vector{1, 2, 3, 1, 2, 3})),                   2);
     EXPECT_EQ((CheckHitrateIdeal(10, 5, std::vector{1, 2, 1, 2, 3})),                      2);
     EXPECT_EQ((CheckHitrateIdeal(0, 6,  std::vector{1, 2, 3, 1, 2, 3})),                   0);
     EXPECT_EQ((CheckHitrateIdeal(1, 5,  std::vector{7, 7, 7, 7, 7})),                      4);
-    EXPECT_EQ((CheckHitrateIdeal(1, 6,  std::vector{1, 2, 1, 2, 1, 2})),                   0);
+    EXPECT_EQ((CheckHitrateIdeal(1, 6,  std::vector{1, 2, 1, 2, 1, 2})),                   2);
 }
