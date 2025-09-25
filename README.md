@@ -4,13 +4,13 @@ Small C++ project implementing several cache algorithms (LRU, 2Q, and an ideal/p
 
 ## Build
 
-1) Clone the repository:
+Clone the repository:
    ```bash
    git clone https://github.com/nniikon/Caches.git
    cd Caches
    git submodule update --init --recursive
    ```
-3) Configure and build:
+Configure and build:
    ```bash
    cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
    cmake --build build -j
