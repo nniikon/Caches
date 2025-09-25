@@ -25,7 +25,7 @@ public:
 
     template <typename Func>
         requires std::convertible_to<std::invoke_result_t<Func, KeyT>, T>
-    std::pair<bool, T&> Lookup(KeyT key, Func getter);
+    std::pair<bool, T> Lookup(KeyT key, Func getter);
 
 private:
     size_t capacity_ = 0ull;
@@ -116,7 +116,7 @@ inline size_t get_a1_out_capacity(size_t capacity, float a1_out_capacity_factor)
 template <typename T, typename KeyT>
 template <typename Func>
     requires std::convertible_to<std::invoke_result_t<Func, KeyT>, T>
-std::pair<bool, T&> Cache2Q<T, KeyT>::Lookup(KeyT key, Func getter) {
+std::pair<bool, T> Cache2Q<T, KeyT>::Lookup(KeyT key, Func getter) {
     assert(capacity_ > 0ull);
 
 #ifndef NDEBUG

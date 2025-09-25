@@ -29,7 +29,7 @@ int main() {
 
     size_t hit_count = 0;
     for (size_t i = 0; i < input_size; i++) {
-        std::pair<bool, Page&> lookup_res = cache.Lookup(input_vector[i], GetPage);
+        std::pair<bool, Page> lookup_res = cache.Lookup(input_vector[i], GetPage);
         hit_count += lookup_res.first;
     }
 
